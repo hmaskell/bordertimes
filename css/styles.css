@@ -134,13 +134,22 @@ a:hover, a:active {
       'footer footer footer footer footer footer';
   }
 
+  h2 {
+    padding: 0;
+  }
+
   .border {
     display: inline-flex;
     text-align: left;
     margin: 5px;
   }
 
+  .border-icon  {
+    width: 105px;
+    height: 105px;
+  }
+
   .border-text {
-    padding: 40px 0 0 20px;
+    padding: 20px 0 0 20px;
   }
 }
