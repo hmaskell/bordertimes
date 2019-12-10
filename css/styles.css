@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  border-radius: 4px;  
+  font-family: 'Solway', serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+  grid-template-rows: 1fr auto;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  padding: 30px;
+  font-size: 20px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header' 
+    'left middle right'
+    'footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Style the header text */
+
+.hint-text {
+  color: #a7a6a6;
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  padding: 20px 0;
+  font-size: x-large;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style border items */
+.border  {
+  margin: 30px 10px;
+  background-color: #f1f1f1;
+}
+
+/* Style border titles */
+.border-title  {
+  font-size: medium;
+  margin: auto;
+  font-style: normal;
+}
+
+/* Style images */
+.border-icon  {
+  width: 145px;
+}
+
+.country-icon  {
+  height: 50px;
+}
+
+.flag:hover {
+  height: 52px;
+  border-bottom:2px solid #4e4f82;
+}
+
+.arrow  {
+  margin: 10px 10px 0 10px;
+}
+
+/* Style links */
+a:link, a:visited {
+  background-color: #684e56;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+a:hover, a:active {
+  background-color: #c23844;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin:10px 0 0 0;
+  padding: 20px 0 0;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+
+  .border {
+    display: inline-flex;
+    text-align: left;
+    margin: 5px;
+  }
+
+  .border-text {
+    padding: 40px 0 0 20px;
+  }
+}
