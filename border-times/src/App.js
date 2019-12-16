@@ -4,6 +4,10 @@ import './App.css';
 
 function GetWaitTime(crossingId) {
   return Math.random();
+  // define variables for each crossing time
+  // read them from the website
+  // assign each value to the corresponding variable
+  // return variables
 }
 
 function BorderCrossingCard(props) {
@@ -28,14 +32,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/*
         <img src={logo} className="App-logo" alt="logo" />
         <h1>{title}</h1>
+        */}
+        <h1>Border Delays</h1>
+        <img src="./img/BorderDelays_CAFlag.png" className="country-icon flag" alt="canada flag" />
+        <img src="./img/BorderDelays_arrow.png" className="country-icon arrow" alt="arrow" />
+        <img src="./img/BorderDelays_USFlag.png" className="country-icon flag" alt="us flag" />
+        <h4>Select your destination country</h4>
         <button onClick={
           function() {
             setTitle("World");
           }
         }>Click</button>
 {titles.map(function(title) { return <BorderCrossingCard title={title} img={"image"} waittime={GetWaitTime(1)} />})}
+        {/*}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -46,7 +58,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+      </a>*/
+      }
       </header>
     </div>
   );
